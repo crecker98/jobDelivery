@@ -12,6 +12,7 @@ class Annunci extends Model
     protected $returnType = 'object';
     protected $allowedFields = ['codice', 'utente', 'foto', 'nome', 'specializzazione', 'localita', 'indirizzo', 'descrizione', 'stato'];
 
+
     public function getListaAnnunciForUtente($stato, $codUtente): array {
         if($stato == 3) {
             $annunci = $this->where(['utente' => $codUtente, 'stato' => 3])->findAll();

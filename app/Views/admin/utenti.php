@@ -30,13 +30,15 @@
                                             <td class="text-truncate" style="max-width: 200px;"><?=$utente->nome." ".$utente->cognome?></td>
                                             <td class="text-truncate" style="max-width: 200px;"><?=$utente->email?></td>
                                             <?php
-                                            if($utente->stato == 1) {
+                                            if(intval($utente->stato) == 1) {
                                             ?>
                                             <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-square-fill fs-5 text-danger" onclick="bannaUtente('<?=$utente->cf?>')" style="margin-left: 0px;">
                                                     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"></path>
                                                 </svg></td>
                                             <?php } else { ?>
-                                            <td></td>
+                                                <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-square-fill fs-5 text-success" onclick="attivaUtente('<?=$utente->cf?>')" style="margin-left: 0px;">
+                                                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"></path>
+                                                    </svg></td>
                                             <?php } ?>
                                         </tr>
                                     <?php
@@ -56,6 +58,11 @@
     function bannaUtente(cf){
         if(confirm("Sei sicuro di voler bannare l'utente?")){
             window.location.href = "<?=base_url('admin/bannaUtente')?>/"+cf;
+        }
+    }
+    function attivaUtente(cf){
+        if(confirm("Sei sicuro di voler attivare l'utente?")){
+            window.location.href = "<?=base_url('admin/attivaUtente')?>/"+cf;
         }
     }
 </script>

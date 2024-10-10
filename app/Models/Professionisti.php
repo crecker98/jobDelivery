@@ -17,7 +17,7 @@ class Professionisti extends Model
         $sql = "SELECT p.*, AVG(r.valutazione) as valutazioneMedia FROM professionisti p LEFT JOIN recensioni r ON p.cf = r.professionista";
         $sql .= " WHERE 1=1";
         if($mansione != "") {
-            $sql .= " AND p.specializzazione LIKE '%$mansione%'";
+            $sql .= " AND lower(p.specializzazione) LIKE lower('%$mansione%')";
         }
         $sql .= " GROUP BY p.cf";
         if($valutazione != 0) {

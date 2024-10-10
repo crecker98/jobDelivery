@@ -52,5 +52,7 @@ $routes->get('/admin/login', 'Admin::login');
 $routes->post('/admin/login', 'Admin::doLogin');
 $routes->get('/admin/utenti', 'Admin::utenti');
 $routes->get('/admin/bannaUtente/(:alphanum)', 'Admin::bannaUtente/$1');
+$routes->get('/admin/attivaUtente/(:alphanum)', 'Admin::attivaUtente/$1');
 $routes->get('/admin/professionisti', 'Admin::professionisti');
 $routes->get('/admin/attivaProfessionista/(:alphanum)', 'Admin::attivaProfessionista/$1');
+$routes->get('/admin/bannaProfessionista/(:alphanum)', 'Admin::bannaProfessionista/$1');

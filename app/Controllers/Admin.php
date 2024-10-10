@@ -23,6 +23,16 @@ class Admin extends BaseController
         return $content;
     }
 
+    public function bannaProfessionista($codice)
+    {
+        $professionisti = new \App\Models\Professionisti();
+        $professionista = $professionisti->find($codice);
+        $professionista->stato = 1;
+        $professionisti->save($professionista);
+        $data['messaggio'] = "Professionista bannato correttamente";
+        return $this->index($data);
+    }
+
     public function attivaProfessionista($codice) {
         $professionisti = new \App\Models\Professionisti();
         $professionista = $professionisti->find($codice);
@@ -43,6 +53,16 @@ class Admin extends BaseController
         $content .= view('/admin/professionisti', $data);
         $content .= view("/admin/footer");
         return $content;
+    }
+
+    public function attivaUtente($cf)
+    {
+        $utenti = new Utenti();
+        $utente = $utenti->find($cf);
+        $utente->stato = 1;
+        $utenti->save($utente);
+        $data['messaggio'] = "Utente attivato correttamente";
+        return $this->index($data);
     }
 
     public function bannaUtente($cf) {

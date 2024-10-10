@@ -11,11 +11,11 @@
                         </ul>
                     </div>
                 <?php } ?>
-                <?php if (isset($messaggio)) { ?>
-                    <div class="alert alert-success" style="width: 100%" role="alert">
-                        <?= $messaggio ?>
-                    </div>
-                <?php } ?>
+                    <?php if (isset($messaggio)) { ?>
+                        <div class="alert alert-success" style="width: 100%" role="alert">
+                            <?= $messaggio ?>
+                        </div>
+                    <?php } ?>
                 <div class="col-md-8 col-lg-12">
                     <h1>Profilo - <?= $utente->cf ?></h1>
                     <hr>

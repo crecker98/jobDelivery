@@ -121,11 +121,11 @@ class Profilo extends BaseController
 
     public function inserisciAnnuncio(): string {
         $rulesAnnuncio = [
-            'nome' => 'required|min_length[3]|max_length[20]',
+            'nome' => 'required',
             'specializzazione' => 'required',
             'localita' => 'required',
-            'indirizzo' => 'required|min_length[3]|max_length[50]',
-            'descrizione' => 'required|min_length[10]|max_length[500]',
+            'indirizzo' => 'required',
+            'descrizione' => 'required',
             'foto' => 'uploaded[foto]|max_size[foto,1024]|is_image[foto]',
         ];
         $validation = Services::validation();
