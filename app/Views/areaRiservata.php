@@ -439,5 +439,9 @@
             window.location.href = "<?= base_url("areaRiservata/eliminaAnnuncio") ?>/" + codice;
         }
     }
-
+    function confermaCandidatura(codice, cf) {
+        if (confirm("Sei sicuro di voler confermare questa candidatura?")) {
+            window.location.href = "<?= base_url("areaRiservata/confermaCandidatura") ?>/" + codice + "/" + cf;
+        }
+    }
 </script>
