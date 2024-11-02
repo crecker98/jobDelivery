@@ -5,7 +5,7 @@
                     <h2 class="text-info">Annunci di zona</h2>
                 </div>
                 <div class="row">
-                    <?
+                    <?php
                     foreach ($annunci as $annuncio) {
                         ?>
                     <div class="col-md-6 col-lg-4">
