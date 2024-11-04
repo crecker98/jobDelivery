@@ -115,6 +115,7 @@
                                             <h3><?=$annuncio->nome?></h3>
                                             <div class="info"><span class="text-muted"><?=$annuncio->localita?> -&nbsp;<?=$annuncio->indirizzo?></span><span class="text-muted"><?=$annuncio->utente->nome." ".$annuncio->utente->cognome?></span></div>
                                             <p><?=$annuncio->descrizione?></p>
+                                            <p><?=$annuncio->recensione?></p>
                                         </div>
                                     </div>
                                 </div>

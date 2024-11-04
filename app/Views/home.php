@@ -3,7 +3,7 @@
         <section class="clean-block clean-hero" style="background-image:url(&quot;assets/img/tech/1.png&quot;);color:rgba(9, 162, 255, 0.85);">
             <div class="text">
                 <h2>Un modo innovativo di connettervi con i professionisti di cui avete bisogno, quando avete bisogno!</h2>
-                <a class="btn btn-outline-light btn-lg" role="button" href="professionisti.html">I nostri professionisti</a>
+                <a class="btn btn-outline-light btn-lg" role="button" href="<?=base_url('professionistiList')?>">I nostri professionisti</a>
             </div>
         </section>
         <section class="clean-block clean-info dark">
@@ -17,7 +17,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <h3>Puntiamo a diventare il punto di riferimento online per la ricerca di professionisti specializzati, basando ogni interazione su fiducia e competenza e rendendo la scelta di esperti per interventi domestici facile e trasparente per tutti.</h3>
-                        <div class="getting-started-info"></div><a class="btn btn-outline-primary btn-lg" role="button" href="professionista/registration.html">Lavora con noi</a>
+                        <div class="getting-started-info"></div><a class="btn btn-outline-primary btn-lg" role="button" href="<?=base_url('/professionisti/signup')?>">Lavora con noi</a>
                     </div>
                 </div>
             </div>

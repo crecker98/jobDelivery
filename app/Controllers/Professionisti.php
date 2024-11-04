@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\Annunci;
 use App\Models\Candidature;
 use App\Models\Messaggi;
+use App\Models\Recensioni;
 use CodeIgniter\Controller;
 use Config\Services;
 
@@ -19,6 +20,10 @@ class Professionisti extends Controller
         }
         $data['annunciAperti'] = (new Annunci())->getListaAnnunciForProfessionista(1, $this->request->getCookie('cod_professionista'));
         $data['annunciChiusi'] = (new Annunci())->getListaAnnunciForProfessionista(3, $this->request->getCookie('cod_professionista'));
+        foreach ($data['annunciChiusi'] as $annuncio) {
+            $recensioni = new Recensioni();
+            $annuncio->recensione = $recensioni->where('annuncio', $annuncio->codice)->first()->valutazione;
+        }
         $content .= view('professionista/home', $data);
         $content .= view('professionista/footer');
 
