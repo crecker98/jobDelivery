@@ -234,7 +234,7 @@
                                                                                                     </td>
                                                                                                     <td class="text-truncate"
                                                                                                         style="max-width: 200px;">
-                                                                                                        <?=$candidatura->professionista->email?>
+                                                                                                        <?=$candidatura->professionista->valutazioneMedia?>
                                                                                                     </td>
                                                                                                     <td class="text-center">
                                                                                                         <button class="btn btn-primary"

@@ -22,7 +22,10 @@ class Professionisti extends Controller
         $data['annunciChiusi'] = (new Annunci())->getListaAnnunciForProfessionista(3, $this->request->getCookie('cod_professionista'));
         foreach ($data['annunciChiusi'] as $annuncio) {
             $recensioni = new Recensioni();
-            $annuncio->recensione = $recensioni->where('annuncio', $annuncio->codice)->first()->valutazione;
+            $annuncio->recensione = $recensioni->where('annuncio', $annuncio->codice)->first();
+            if ($annuncio->recensione) {
+                $annuncio->recensione->valutazione = $annuncio->recensione->valutazione;
+            }
         }
         $content .= view('professionista/home', $data);
         $content .= view('professionista/footer');
@@ -47,6 +50,10 @@ class Professionisti extends Controller
     }
 
     function eliminaCandidatura($codiceCandidatura) {
+        $candidatura = (new Candidature())->find($codiceCandidatura);
+        $annuncio = (new Annunci())->find($candidatura->annuncio);
+        $annuncio->stato = 1;
+        (new Annunci())->save($annuncio);
         (new Candidature())->delete($codiceCandidatura);
         $data['messaggio'] = "Candidatura eliminata correttamente";
         return $this->index($data);

@@ -23,6 +23,7 @@ class Annunci extends Model
             $annuncio->candidature = (new Candidature())->where(['annuncio' => $annuncio->codice])->findAll();
             foreach ($annuncio->candidature as $candidatura) {
                 $candidatura->professionista = (new Professionisti())->find($candidatura->professionista);
+                $candidatura->professionista->valutazioneMedia = round((new Recensioni())->where(['professionista' => $candidatura->professionista->cf])->selectAvg('valutazione')->first()->valutazione);
             }
             $annuncio->messaggi = (new Messaggi())->where(['annuncio' => $annuncio->codice])->findAll();
             $annuncio->recensito = (new Recensioni())->where(['annuncio' => $annuncio->codice])->first() != null;
