@@ -9,16 +9,17 @@
         <section class="clean-block clean-info dark">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">About us</h2>
-                    <p>La nostra mission è fornire una piattaforma affidabile e intuitiva che facilita la connessione tra clienti e professionisti qualificati, come idraulici, elettricisti e altri esperti, permettendo ai clienti di risolvere le loro problematiche domestiche in modo efficiente e sicuro. Ci impegniamo a garantire un servizio di qualità, mettendo al centro la soddisfazione e la tranquillità dei nostri utenti.
-
-</p>
+                    <h2 class="text-info">Mission</h2>
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <h3>Puntiamo a diventare il punto di riferimento online per la ricerca di professionisti specializzati, basando ogni interazione su fiducia e competenza e rendendo la scelta di esperti per interventi domestici facile e trasparente per tutti.</h3>
-                        <div class="getting-started-info"></div><a class="btn btn-outline-primary btn-lg" role="button" href="<?=base_url('/professionisti/signup')?>">Lavora con noi</a>
                     </div>
+                    <div class="col-md-6">
+                        <h3>La nostra mission è fornire una piattaforma affidabile e intuitiva che facilita la connessione tra clienti e professionisti qualificati, come idraulici, elettricisti e altri esperti, permettendo ai clienti di risolvere le loro problematiche domestiche in modo efficiente e sicuro. Ci impegniamo a garantire un servizio di qualità, mettendo al centro la soddisfazione e la tranquillità dei nostri utenti.</h3>
+                    
+                    </div>
+                    <div class="getting-started-info"></div><a class="btn btn-outline-primary btn-lg" role="button" href="<?=base_url('/professionisti/signup')?>">Lavora con noi</a>
                 </div>
             </div>
         </section>
