@@ -1,9 +1,9 @@
 
     <main class="page landing-page">
-        <section class="clean-block clean-hero" style="background-image:url(&quot;assets/img/tech/1.png&quot;);color:rgba(9, 162, 255, 0.85);">
-            <div class="text">
+        <section class="clean-block clean-hero" style="background-image:url(&quot;assets/img/tech/1.png&quot;);color:rgba(9, 162, 255, 0);">
+            <div class="text" style="color:black!important">
                 <h2>Un modo innovativo di connettervi con i professionisti di cui avete bisogno, quando avete bisogno!</h2>
-                <a class="btn btn-outline-light btn-lg" role="button" href="<?=base_url('professionistiList')?>">I nostri professionisti</a>
+                <a class="btn btn-outline-light btn-lg" role="button" href="<?=base_url('professionistiList')?>" style="color:black!important">I nostri professionisti</a>
             </div>
         </section>
         <section class="clean-block clean-info dark">
